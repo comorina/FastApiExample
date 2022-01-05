@@ -18,7 +18,7 @@ function Home() {
         event.preventDefault();
         setUsr("")
 
-        fetch("https://todoimss.herokuapp.com/user/update", {
+        fetch("https://todoimss.herokuapp.com/user", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newUsr)
