@@ -21,7 +21,7 @@ export default function Add() {
       event.preventDefault();
       setItem("")
 
-      fetch("https://todoimss.herokuapp.com/todo", {
+      fetch("http://todoimss.herokuapp.com/todo", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newTodo)
