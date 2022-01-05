@@ -1,38 +1,117 @@
-.App {
+* {
+  margin-top: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  padding-top: 30px;
+  font-family: sans-serif;
+  font-size: 2rem;
+  background-color: rgba(238, 11, 227, 0.986);
+  width: 100%;
+  height: 10rem;
+}
+
+.usr {
+  margin-top: 10%;
+  margin-left: 42%;
+}
+
+.inpt {
+  margin-left: 42%;
+  background: #fff;
+  color: #525865;
+  border-radius: 4px;
+  border: 1px solid #d1d1d1;
+  box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.07);
+  font-family: inherit;
+  font-size: 1em;
+  line-height: 1.45;
+  outline: none;
+  padding: 0.6em 1em 0.3em;
+  width: 12%;
+}
+.startbtn {
+  margin-top: 50px;
+  margin-left: 46.5%;
+  padding: 7px;
+  background-color: rgba(128, 19, 179, 0.651);
+  border-radius: 10px;
+  box-shadow: 10px 15px 17px 1px#52586573;
+}
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+}
+.todo-input {
+  margin-left: 40%;
+}
+.todo-button {
+  background-color: rgba(128, 19, 179, 0.651);
+}
+.todo-list-add {
+  margin-left: 30%;
+  min-width: 20%;
+  list-style: none;
+  margin-right: 100px;
+}
+
+/*.todo {
+  margin: 1rem;
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+}
+.filter-todo {
+  padding: 1rem;
+}
+.todo li {
+  flex: 1;
+}*/
+
+.trash-btn,
+.complete-btn {
+  background-color: rgb(243, 117, 68);
+  width: 50px;
+  height: 50px;
+}
+.complete-btn {
+  background: rgba(4, 245, 56, 0.822);
+  width: 50px;
+  height: 50px;
+}
+/*.todo-item {
+  padding: 0rem 0.5rem;
+}
+.todo-item {
+  padding: 1rem 0.5rem;
+}*/
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.img {
+  width: 20px;
+}
+.listHead {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo_table {
+  margin-left: 40%;
+  column-span: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.showbtn1 {
+  margin-top: 50px;
+  margin-left: 46.5%;
+  padding: 7px;
+  background-color: rgba(173, 76, 238, 0.52);
+  border-radius: 10px;
+  box-shadow: 10px 15px 17px 1px#52586573;
 }

@@ -1,32 +1,44 @@
-import React,{ useState, useContext} from 'react'
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
+export default function Add() {
+  const [item, setItem] = useState("")
+  //const [inputtext, setInputtext] = useState("")
+  const handleInput = event => {
+    setItem(event.target.value)
+    console.log(event);
+  }
 
-export default function Add(todos, setTodos, fetchTodos) {
-    const [item, setItem] = useState("")
-    const handleInput = event  => {
-        setItem(event.target.value)
-        console.log(event);
+  const handleSubmit = (event) => {
+    if (item === "") {
+      alert("Please enter something here!");
+    }
+    else {
+      const newTodo = {
+        todo: item
       }
-
     
-      const handleSubmit = (event) => {
-        const newTodo = {
-          id: Math.random()*100,
-          todo: item
-        }
-        console.log(item);
-    
-        fetch("http://localhost:8000/todo", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(newTodo)
-        })
-      }
+      console.log(item);
+      event.preventDefault();
+      setItem("")
 
-    return (
+      fetch("https://todo-api-sopra.herokuapp.com/todo", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(newTodo)
+      })
+    }
+  }
+  return (
 
-        <form>
-            <input type="text" onChange={handleInput}/>
-            <button type="button" onClick = {handleSubmit}>Add</button>
-        </form>
-    )
+    <form>
+      <input type="text" value={item} onChange={handleInput} className="todo-input" />
+      <button type="button" onClick={handleSubmit} className="todo-button">Add</button>
+      <div>
+        <Link to={'/list'}>
+          <button type='button' className="showbtn1">Show Todo</button>
+        </Link>
+      </div>
+    </form>
+
+  )
 }
