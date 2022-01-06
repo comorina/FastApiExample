@@ -18,7 +18,7 @@ function Home() {
         event.preventDefault();
         setUsr("")
 
-        fetch("http://todo-api-sopra.herokuapp.com/user", {
+        fetch("https://todo-fast-imss.herokuapp.com/user", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newUsr)
