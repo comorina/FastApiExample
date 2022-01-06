@@ -23,6 +23,7 @@ export default function Add() {
 
       fetch("https://todo-fast-imss.herokuapp.com/todo", {
         method: "POST",
+        mode:"cors",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newTodo)
       })
