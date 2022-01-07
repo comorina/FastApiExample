@@ -12,7 +12,7 @@ export default function Todos() {
   const fetchTodos = async () => {
     const response = await fetch("https://todo-fast-imss.herokuapp.com/todo")
     const todos = await response.json()
-    console.log(todos.data);
+    //console.log(todos.data);
     setTodos(todos.data)
   }
   useEffect(() => {

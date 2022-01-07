@@ -7,14 +7,14 @@ function Home() {
     const handleInput = event => {
 
         setUsr(event.target.value)
-        console.log(event);
+        //console.log(event);
 
     }
     const handleSubmit = (event) => {
         const newUsr = {
             username: usr
         }
-        console.log(usr);
+        //console.log(usr);
         event.preventDefault();
         setUsr("")
 

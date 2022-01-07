@@ -5,7 +5,7 @@ export default function Add() {
   //const [inputtext, setInputtext] = useState("")
   const handleInput = event => {
     setItem(event.target.value)
-    console.log(event);
+    //console.log(event);
   }
 
   const handleSubmit = (event) => {
@@ -17,7 +17,7 @@ export default function Add() {
         todo: item
       }
     
-      console.log(item);
+      //console.log(item);
       event.preventDefault();
       setItem("")
 
