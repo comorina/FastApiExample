@@ -21,7 +21,8 @@ export default function Add() {
       event.preventDefault();
       setItem("")
 
-      fetch("https://todo-fast-imss.herokuapp.com/todo", {
+      // fetch("https://todo-fast-imss.herokuapp.com/todo", {
+      fetch("http://127.0.0.1:8000/todo", {
         method: "POST",
         mode:"cors",
         headers: { "Content-Type": "application/json" },

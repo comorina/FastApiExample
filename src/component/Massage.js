@@ -10,7 +10,8 @@ export default function Todos() {
   
 
   const fetchTodos = async () => {
-    const response = await fetch("https://todo-fast-imss.herokuapp.com/todo")
+    // const response = await fetch("https://todo-fast-imss.herokuapp.com/todo")
+    const response = await fetch("http://127.0.0.1:8000/todo")
     const todos = await response.json()
     //console.log(todos.data);
     setTodos(todos.data)
